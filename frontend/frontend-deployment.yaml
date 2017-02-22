@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: frontend
+  name: guestbook
   # these labels can be applied automatically
   # from the labels in the pod template if not set
   # labels:
@@ -25,7 +25,8 @@ spec:
     spec:
       containers:
       - name: guestbook-go
-        image: gcr.io/google-samples/gb-frontend:v4
+        image: quay.io/dcooley/dcooley-demo:v1
+        imagePullPolicy: IfNotPresent
         resources:
           requests:
             cpu: 100m
@@ -39,4 +40,4 @@ spec:
           # line below.
           # value: env
         ports:
-        - containerPort: 80
+        - containerPort: 3000
