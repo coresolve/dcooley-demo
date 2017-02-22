@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: guestbook-go
-        image: quay.io/dcooley/dcooley-demo:v1
+        image: quay.io/dcooley/dcooley-demo:v4
         imagePullPolicy: IfNotPresent
         resources:
           requests:
